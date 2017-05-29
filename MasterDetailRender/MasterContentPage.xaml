@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:MasterDetailRender"
+    x:Class="MasterDetailRender.MasterContentPage">
+    
+    <ContentPage.Title><Binding Path="MasterTitle"></Binding></ContentPage.Title>
+    <ContentPage.Icon><Binding Path="MasterIcon"></Binding></ContentPage.Icon>
+    
+    <local:MasterDetailLeftIconTextPage.LeftTitle><Binding Path="MasterTitle"></Binding></local:MasterDetailLeftIconTextPage.LeftTitle>
+
+    <local:MasterDetailLeftIconTextPage.LeftIcon><Binding Path="MasterIcon"></Binding></local:MasterDetailLeftIconTextPage.LeftIcon>
+    
+	<ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="The Master Page" HorizontalOptions="Center" Margin="0,30,0,0" />
+            <Button Text="Fire" Command="{Binding NavToFireCommand}" />
+            <Button Text="Grill" Command="{Binding NavToGrillCommand}" />
+            <Button Text="Hill" Command="{Binding NavToHillsCommand}" />
+        </StackLayout>
+    </ContentPage.Content>	
+</ContentPage>
