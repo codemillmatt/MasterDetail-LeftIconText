@@ -54,7 +54,7 @@ namespace MasterDetailRender.iOS
 
         void SetupLeftButton(string buttonText = "", string buttonIcon = "")
         {
-			if (!(Element is MasterDetailPage mdp)) return;
+			if (!(Element is MasterDetailLeftIconTextPage mdp)) return;
 			if (!(Platform.GetRenderer(mdp.Detail) is UINavigationController nc)) return;
 
 			UIButton btn = new UIButton(UIButtonType.Custom);
